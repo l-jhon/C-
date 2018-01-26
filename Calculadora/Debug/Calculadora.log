@@ -1,0 +1,17 @@
+﻿Build started 06/04/2015 21:21:29.
+     1>Project "C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Calculadora.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Origem.cpp
+         Origem.cpp
+     1>c:\users\jhon lucas\documents\visual studio 2013\projects\calculadora\origem.cpp(11): warning C4101: 'x' : variável local não referenciada
+     1>c:\users\jhon lucas\documents\visual studio 2013\projects\calculadora\origem.cpp(30): warning C4717: 'main' : recursivo em todos os caminhos de controle, função causará estouro na pilha em tempo de execução
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Debug\Calculadora.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Debug\Calculadora.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Debug\Calculadora.lib" /MACHINE:X86 Debug\Origem.obj
+         Debug\pilha.obj
+         Debug\pilha1.obj
+         Calculadora.vcxproj -> C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Debug\Calculadora.exe
+     1>Done Building Project "C:\Users\Jhon Lucas\Documents\Visual Studio 2013\Projects\Calculadora\Calculadora.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.84

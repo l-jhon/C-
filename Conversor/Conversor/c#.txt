@@ -1,0 +1,13 @@
+bool
+float
+double
+int
+char
+for
+if
+else
+long
+true
+false
+Console.WriteLine
+Console.ReadLine

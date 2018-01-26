@@ -1,0 +1,74 @@
+﻿Build started 04/10/2015 16:03:49.
+     1>Project "C:\Users\jhonlucas\Dropbox\Programação Jhon\C++\Programação 2015\Ed2 - Vs\MotorPesquisa\MotorPesquisa\MotorPesquisa.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MotorPesquisa.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MotorPesquisa.cpp doc.cpp hash.cpp listavetor.cpp termodoc.cpp vetorObjeto.cpp
+         vetorObjeto.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\vetorobjeto.cpp(3): warning C4627: '#include "termodoc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\vetorobjeto.cpp(4): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\vetorobjeto.cpp(5): warning C4627: '#include <string>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\vetorobjeto.cpp(6): warning C4627: '#include <list>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\vetorobjeto.cpp(28): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         termodoc.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\termodoc.cpp(1): warning C4627: '#include "termodoc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\termodoc.cpp(3): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         listavetor.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\listavetor.cpp(1): warning C4627: '#include "listavetor.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\listavetor.cpp(3): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\listavetor.cpp(4): warning C4627: '#include "listaVetor.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\listavetor.cpp(115): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         hash.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(1): warning C4627: '#include "hash.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(2): warning C4627: '#include "vetorobjeto.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(3): warning C4627: '#include "termodoc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(4): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(5): warning C4627: '#include <termodoc.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(6): warning C4627: '#include <string>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(7): warning C4627: '#include <cctype>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(8): warning C4627: '#include <math.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\hash.cpp(100): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         doc.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\doc.cpp(1): warning C4627: '#include "doc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\doc.cpp(9): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         MotorPesquisa.cpp
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(1): warning C4627: '#include <iostream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(2): warning C4627: '#include <fstream>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(3): warning C4627: '#include <cstdio>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(5): warning C4627: '#include <string.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(6): warning C4627: '#include <stdlib.h>': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(7): warning C4627: '#include "hash.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(8): warning C4627: '#include "termodoc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(9): warning C4627: '#include "doc.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(10): warning C4627: '#include "vetorobjeto.h"': skipped when looking for precompiled header use
+                 Add directive to 'stdafx.h' or rebuild precompiled header
+     1>c:\users\jhonlucas\dropbox\programação jhon\c++\programação 2015\ed2 - vs\motorpesquisa\motorpesquisa\motorpesquisa.cpp(127): fatal error C1010: unexpected end of file while looking for precompiled header. Did you forget to add '#include "stdafx.h"' to your source?
+         Generating Code...
+     1>Done Building Project "C:\Users\jhonlucas\Dropbox\Programação Jhon\C++\Programação 2015\Ed2 - Vs\MotorPesquisa\MotorPesquisa\MotorPesquisa.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.65

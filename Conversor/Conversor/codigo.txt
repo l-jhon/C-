@@ -1,0 +1,15 @@
+float condition;
+string line;
+int a;
+int b;
+a = 10;
+if (a > b || b==a )
+{
+    Console.WriteLine("The variable is set to true.");
+    line = Console.ReadLine();
+    a = a + b * 12 / 2;
+}
+else
+{
+    Console.WriteLine("The variable is set to false.");
+}
