@@ -12,8 +12,8 @@ GLfloat escalaX, escalaY, escalaZ;
 
 static double t = 0;
 static double a = 0;
-static double braco_esquerdo = 0;
-static double braco_direito = 0;
+static double braco_esquerdo = -90;
+static double braco_direito = 90;
 
 bool abrir_braco = false;
 
@@ -64,6 +64,15 @@ void capturarTecla(unsigned char key, int x, int y){
 }
 
 
+void discoC(GLfloat raioInf, GLfloat raioSup, GLfloat alt){
+	GLUquadricObj* q = gluNewQuadric();
+	gluQuadricDrawStyle(q, GLU_FILL);
+	gluQuadricNormals(q, GLU_SMOOTH);
+	gluQuadricTexture(q, GL_TRUE);
+	gluCylinder(q, raioInf, raioSup, alt, 60,60);
+	gluDeleteQuadric(q);
+}
+
 // Função callback chamada para fazer o desenho
 void Desenha(void){
 
@@ -76,15 +85,14 @@ void Desenha(void){
 
  			// cabeça
 	 		glPushMatrix();//-------------------- 1
-	            glColor3f(0.0, 0.0, 1.0); 
-				glutSolidSphere(1.0,50.0,50.0);
+	            glColor3f(0.0,0.0,1.0);
+				glutSolidSphere(3.0,50.0,50.0);
 				glTranslatef(0.0,-10.0,0.0);
-				
+
 	            glBegin(GL_LINES);
 		    	glVertex3f(0.0, 0.0, 0.0);
 		    	glVertex3f(0.0, 10.0, 0.0);
 	            glEnd();
-
 
 		 		// pescoço
 		 		glPushMatrix();//-------------------- 1
@@ -109,7 +117,7 @@ void Desenha(void){
 						glPushMatrix();//-------------------- 1
 				            glColor3f(1.0, 1.0, 0.0);
 							//ombro 
-							glutSolidSphere(1.0,50.0,50.0);
+							glutSolidSphere(1.5,50.0,50.0);
 							
 							
 							//braço			
@@ -156,7 +164,7 @@ void Desenha(void){
 					    glPushMatrix();//-------------------- 1
 				            glColor3f(1.0, 1.0, 0.0);
 							//ombro direito
-							glutSolidSphere(1.0,50.0,50.0);
+							glutSolidSphere(1.5,50.0,50.0);
 							
 							
 							//braço			
