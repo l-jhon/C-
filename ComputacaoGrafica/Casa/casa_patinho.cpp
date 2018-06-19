@@ -17,6 +17,9 @@
 	static double braco_esquerdo = 0;
 	static double perna_direita = 0;
 	static double perna_esquerda = 0;
+	static double movimento_x = 0;
+	static double movimento_y = 0;
+	static double movimento_z = 0;
 
 	bool mover_perna = false;
 
@@ -55,6 +58,11 @@
 			perna_direita = -20;
 			braco_esquerdo = 20;
 			braco_direito = -20;
+			
+			movimento_x = 0;
+			movimento_y = 0;
+			movimento_z += 1;
+
 
 		}
 		else if (key == 'b')
@@ -63,6 +71,10 @@
 			perna_direita = 20;
 			braco_esquerdo = -20;
 			braco_direito = 20;
+
+			movimento_x = 0;
+			movimento_y = 0;
+			movimento_z += 1;
 		}
 		else if (key == 'p')
 		{
@@ -70,6 +82,10 @@
 			perna_direita = 0;
 			braco_esquerdo = 0;
 			braco_direito = 0;
+
+			movimento_x = 0;
+			movimento_y = 0;
+			movimento_z = 0;
 		}
 		else{
 			if(key=='q'){
@@ -97,18 +113,24 @@ void Desenha_Human (void)
 	glLineWidth(5.0);
 
 	glPushMatrix();
-		glTranslatef(10.0, 7.5, 20.0);
+		//glScalef(0.0, 2.0, 0.0);
+		glTranslatef(10.0, 2.0, 20.0);
+
 		glRotatef(180, 0.0, 1.0, 0.0);
+
+		glTranslatef(movimento_x, movimento_y, movimento_z);
+
+		//glTranslatef()
 
 		glPushMatrix();
 			//  Tronco
 	        glColor3f(0.0, 0.0, 1.0);
-	        glTranslatef(0.0, -1.0, 0.0);
-	        glutSolidSphere(0.5,  50.0,  50.0);
+	        glTranslatef(0.0, -0.25, 0.0);
+	        glutSolidSphere(0.2,  50.0,  50.0);
 
 			glColor3f(1.0, 0.0, 0.0);
 	        glBegin(GL_LINES);
-	        glVertex3f(0.0, 2.0, 0.0);
+	        glVertex3f(0.0, 0.5, 0.0);
 	        glVertex3f(0.0, 0.0, 0.0);
 	        glEnd();
 
@@ -116,45 +138,45 @@ void Desenha_Human (void)
 	        glPushMatrix();
 	            // Primeira parte da perna esquerda 
 	            glColor3f(0.0, 0.0, 1.0);
-	            glTranslatef(-0.5, -1.3, 0.0);
+	            glTranslatef(-0.25, -0.325, 0.0);
 	            glRotatef(perna_esquerda, 1.0, 0.0, 0.0);
-	            glutSolidSphere(0.2,  50.0,  50.0);  
+	            glutSolidSphere(0.1,  50.0,  50.0);  
 	            
 	            glColor3f(1.0, 0.0, 0.0);
 	            glBegin(GL_LINES);
-	            glVertex3f(0.3, 1.3, 0.0); //vertice do colo até a cintura  
-	            glVertex3f(-0.5, -2.0, 0.0); // vertice do colo até o joelho
+	            glVertex3f(0.075, 0.325, 0.0); //vertice do colo até a cintura  
+	            glVertex3f(-0.125, -0.5, 0.0); // vertice do colo até o joelho
 	            glEnd();
 
 
 	            glPushMatrix();
 	            	// Joelho
 					glColor3f(0.0, 0.0, 1.0);
-	            	glTranslatef(-0.5, -2.0, 0.0);
+	            	glTranslatef(-0.125, -0.5, 0.0);
 	            	//perna_direita = 0;
-	            	glutSolidSphere(0.2,  50.0,  50.0);
+	            	glutSolidSphere(0.1,  50.0,  50.0);
 
 	            	glPushMatrix();
 	            		// Calcanhar
 	            		glColor3f(0.0, 0.0, 1.0);
-	            		glTranslatef(-0.5, -3.0, 0.0);
-	            		glutSolidSphere(0.2,  50.0,  50.0);
+	            		glTranslatef(-0.125, -0.75, 0.0);
+	            		glutSolidSphere(0.1,  50.0,  50.0);
 
 	            		// vertice do calcanhar até o joelho
 	            		glColor3f(1.0, 0.0, 0.0);
 		            	glBegin(GL_LINES);
-	            		glVertex3f(0.5, 3.0, 0.0);  
+	            		glVertex3f(0.125, 0.75, 0.0);  
 	            		glVertex3f(0.0, 0.0, 0.0); 
 	            		glEnd();
 
 	            		// Nó final do pé
 	    				glColor3f(0.0, 0.0, 1.0);
-	    				glTranslatef(0.0, 0.0, 1.0);
-	    				glutSolidSphere(0.2,  50.0,  50.0);
+	    				glTranslatef(0.0, 0.0, 0.25);
+	    				glutSolidSphere(0.1,  50.0,  50.0);
 
 	    				//vertice do calcanhar até o nó final do pé 
 	    				glBegin(GL_LINES);
-	            		glVertex3f(0.0, 0.0, -1.0);
+	            		glVertex3f(0.0, 0.0, -0.25);
 	            		glVertex3f(0.0, 0.0, 0.0); 
 	            		glEnd();
 
@@ -168,45 +190,45 @@ void Desenha_Human (void)
 	        glPushMatrix();
 	            // Primeira parte da perna direta
 	            glColor3f(0.0, 0.0, 1.0);
-	            glTranslatef(0.5, -1.3, 0.0);
+	            glTranslatef(0.125, -0.325, 0.0);
 	            glRotatef(perna_direita, 1.0, 0.0, 0.0);
-	            glutSolidSphere(0.2,  50.0,  50.0);  
+	            glutSolidSphere(0.1,  50.0,  50.0);  
 	            
 	            glColor3f(1.0, 0.0, 0.0);
 
 				glBegin(GL_LINES);
-	            glVertex3f(-0.3, 1.3, 0.0); //vertice do colo até a cintura  
-	            glVertex3f(0.5, -2.0, 0.0); // vertice do colo até o joelho
+	            glVertex3f(-0.075, 0.325, 0.0); //vertice do colo até a cintura  
+	            glVertex3f(0.025, -0.5, 0.0); // vertice do colo até o joelho
 	            glEnd();
 
 			    glPushMatrix();
 	            	// Joelho
 					glColor3f(0.0, 0.0, 1.0);
-	            	glTranslatef(0.5, -2.0, 0.0);
+	            	glTranslatef(0.025, -0.5, 0.0);
 	            	//perna_esquerda = 0;
-	            	glutSolidSphere(0.2,  50.0,  50.0);
+	            	glutSolidSphere(0.1,  50.0,  50.0);
 
 	            	glPushMatrix();
 	            		// Calcanhar
 	            		glColor3f(0.0, 0.0, 1.0);
-	            		glTranslatef(0.5, -3.0, 0.0);
-	            		glutSolidSphere(0.2,  50.0,  50.0);
+	            		glTranslatef(0.025, -0.75, 0.0);
+	            		glutSolidSphere(0.1,  50.0,  50.0);
 
 	            		// vertice do calcanhar até o joelho
 	            		glColor3f(1.0, 0.0, 0.0);
 		            	glBegin(GL_LINES);
-	            		glVertex3f(-0.5, 3.0, 0.0);  
+	            		glVertex3f(-0.025, 0.75, 0.0);  
 	            		glVertex3f(0.0, 0.0, 0.0); 
 	            		glEnd();
 
 	            		// Nó final do pé
 	    				glColor3f(0.0, 0.0, 1.0);
-	    				glTranslatef(0.0, 0.0, 1.0);
-	    				glutSolidSphere(0.2,  50.0,  50.0);
+	    				glTranslatef(0.0, 0.0, 0.25);
+	    				glutSolidSphere(0.1,  50.0,  50.0);
 
 	    				// vertice do calcanhar até o joelho 
 	    				glBegin(GL_LINES);
-	            		glVertex3f(0.0, 0.0, -1.0);
+	            		glVertex3f(0.0, 0.0, -0.25);
 	            		glVertex3f(0.0, 0.0, 0.0); 
 	            		glEnd();
 
@@ -218,19 +240,19 @@ void Desenha_Human (void)
 	        glPushMatrix();
 	        	// Pescoço
 		        glColor3f(0.0, 0.0, 1.0);
-		        glTranslatef(0.0, 2.0, 0.0);
-		        glutSolidSphere(0.3,  50.0,  50.0);
+		        glTranslatef(0.0, 0.5, 0.0);
+		        glutSolidSphere(0.1,  50.0,  50.0);
 
 		        // vertice que liga o pescoço ao ombro esquerdo
 		        glColor3f(1.0, 0.0, 0.0);
 		        glBegin(GL_LINES);
-		        glVertex3f(-1.5, -0.2, 0.0);
-		        glVertex3f(1.5, -0.2, 0.0);
+		        glVertex3f(-0.375, -0.05, 0.0);
+		        glVertex3f(0.375, -0.05, 0.0);
 		        glEnd();
 
 		       	glColor3f(1.0, 0.0, 0.0);
 		        glBegin(GL_LINES);
-		        glVertex3f(0.0, 1.5, 0.0);
+		        glVertex3f(0.0, 0.375, 0.0);
 		        glVertex3f(0.0, 0.0, 0.0);
 		        glEnd();
 
@@ -238,52 +260,52 @@ void Desenha_Human (void)
 		        glPushMatrix(); // Inicio parte esquerda
 		        	// Ombro
 		        	glColor3f(0.0, 0.0, 1.0);
-	            	glTranslatef(-1.5, -0.3, 0.0);
+	            	glTranslatef(-0.375, -0.075, 0.0);
 	            	glRotatef(braco_esquerdo, 1.0, 0.0, 0.0);
-	            	glutSolidSphere(0.2,  50.0,  50.0);
+	            	glutSolidSphere(0.1,  50.0,  50.0);
 
 	    		    // vertice que liga o ombro a mão
 			        glColor3f(1.0, 0.0, 0.0);
 			        glBegin(GL_LINES);
-			        glVertex3f(-0.5, -2.0, 0.0);
+			        glVertex3f(-0.025, -0.5, 0.0);
 			        glVertex3f(0.0, 0.0, 0.0);
 			        glEnd();
 
 	            	glPushMatrix();
 	            		// Mão
 	            		glColor3f(0.0, 0.0, 1.0);
-	            		glTranslatef(-0.5, -2.0, 0.0);
-	            		glutSolidSphere(0.2,  50.0,  50.0);
+	            		glTranslatef(-0.025, -0.5, 0.0);
+	            		glutSolidSphere(0.1,  50.0,  50.0);
 	            	glPopMatrix();
 		        glPopMatrix(); // Fim parte esquerda
 
 	    	    glPushMatrix(); // Inicio parte direita
 	    	    	// Ombro
 			    	glColor3f(0.0, 0.0, 1.0);
-			    	glTranslatef(1.5, -0.3, 0.0);
+			    	glTranslatef(0.375, -0.075, 0.0);
 			    	glRotatef(braco_direito, 1.0, 0.0, 0.0);
-			    	glutSolidSphere(0.2,  50.0,  50.0);
+			    	glutSolidSphere(0.1,  50.0,  50.0);
 
 				    // vertice que liga o ombro a mão
 			        glColor3f(1.0, 0.0, 0.0);
 			        glBegin(GL_LINES);
-			        glVertex3f(0.5, -2.0, 0.0);
+			        glVertex3f(0.025, -0.5, 0.0);
 			        glVertex3f(0.0, 0.0, 0.0);
 			        glEnd();
 
 			    	glPushMatrix();
 			    		// Mão
 			    		glColor3f(0.0, 0.0, 1.0);
-			    		glTranslatef(0.5, -2.0, 0.0);
-			    		glutSolidSphere(0.2,  50.0,  50.0);
+			    		glTranslatef(0.025, -0.5, 0.0);
+			    		glutSolidSphere(0.1,  50.0,  50.0);
 			    	glPopMatrix();
 		        glPopMatrix(); // Fim da parte direita
 
 		        glPushMatrix();
 		        	// Cabeça 
 		        	glColor3f(0.0, 0.0, 1.0);
-			    	glTranslatef(0.0, 1.5, 0.0);
-			    	glutSolidSphere(0.5,  50.0,  50.0);
+			    	glTranslatef(0.0, 0.375, 0.0);
+			    	glutSolidSphere(0.3,  50.0,  50.0);
 			    glPopMatrix();
 
 			glPopMatrix();
@@ -302,10 +324,11 @@ void Desenha_Human (void)
 		// Limpa a janela e o depth buffer
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-		 glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT);
 	   //  glRotated(a,0,1,0);
 			// Parede externa lateral ? esquerda 
 			glPushMatrix();
+			//glScalef(0.0, 2.0, 0.0);
 
 				glPushMatrix();
 					glColor4f(0.0, 0.0, 0.0, 1.0);
@@ -513,10 +536,10 @@ void Desenha_Human (void)
 						glRotated(var, 0, 1, 0);
 			        	glColor3f(0.8, 0.7, 0.6);
 			        	glBegin(GL_QUADS);
-			        	glVertex3f(0, 0, 0);
-			        	glVertex3f(0, 3, 0);
-			        	glVertex3f(2, 3, 0);
-			        	glVertex3f(2, 0, 0);
+			        	glTexCoord2f(0.0f, 0.0f); glVertex3f(0, 0, 0);
+			        	glTexCoord2f(1.0f, 0.0f); glVertex3f(0, 3, 0);
+			        	glTexCoord2f(1.0f, 0.0f); glVertex3f(2, 3, 0);
+			        	glTexCoord2f(1.0f, 0.0f); glVertex3f(2, 0, 0);
 			        	glEnd();
 			        glPopMatrix();	
 			        
@@ -1220,13 +1243,12 @@ void Desenha_Human (void)
 								glVertex3f(15, 6, 12);
 								glEnd();
 
-								Desenha_Human();
-
 						    glPopMatrix();
 
 
 				glPopMatrix();        	// Fim - Terceiro retangulo de cima para baixo do primeiro andar
 
+				Desenha_Human();
 
 		    glutSwapBuffers(); // 
 	}
